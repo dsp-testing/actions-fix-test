@@ -74,7 +74,7 @@ jobs:
           ref: ${{ ((github.ref_type == 'tag') && github.sha) || github.ref }}
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ inputs.NODE_VERSION }}
           registry-url: ${{ inputs.NPM_REGISTRY_DOMAIN }}
