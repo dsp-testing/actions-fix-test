@@ -125,7 +125,7 @@ jobs:
         run: echo "PACKAGE_MANAGER=npm" >> $GITHUB_ENV
 
       - name: Cache npm/Yarn dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.deps_cache
           key: ${{ runner.os }}-node-${{ inputs.NODE_VERSION }}-${{ env.PACKAGE_MANAGER }}-${{ hashFiles('**/package-lock.json', '**/npm-shrinkwrap.json', '**/yarn.lock') }}
